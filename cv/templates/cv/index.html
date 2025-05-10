@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static tailwind_tags %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50">
+    <section class="bg-indigo-700 text-white py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Revenda TechParts</h1>
+            <p class="text-xl mb-8">Peças e periféricos de informática com os melhores preços do mercado</p>
+            <div class="flex justify-center gap-4">
+                <a href="#produtos"
+                    class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">Ver
+                    Produtos</a>
+                <a href="/trabalhe-conosco"
+                    class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-800 transition">Trabalhe
+                    Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossos Destaques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x200?text=Placa+de+Video" alt="Placa de Vídeo"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Placa de Vídeo RTX 3060</h3>
+                        <p class="text-gray-600 mb-4">Performance excepcional para jogos e edição</p>
+                        <span class="text-2xl font-bold">R$ 2.499,90</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x200?text=SSD+NVMe" alt="SSD NVMe"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">SSD NVMe 1TB</h3>
+                        <p class="text-gray-600 mb-4">Velocidade de leitura até 3500MB/s</p>
+                        <span class="text-2xl font-bold">R$ 399,90</span>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x200?text=Monitor+4K" alt="Monitor 4K"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Monitor 27" 4K</h3>
+                        <p class="text-gray-600 mb-4">Cores vibrantes e alta resolução</p>
+                        <span class="text-2xl font-bold">R$ 1.899,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trabalhe-conosco" class="bg-gray-100 py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Trabalhe Conosco</h2>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-semibold mb-4">Venha fazer parte do nosso time!</h3>
+                <p class="mb-6">Estamos sempre em busca de talentos para nossa equipe. Envie seu currículo e faça parte
+                    de uma empresa que valoriza seus colaboradores.</p>
+
+                <form class="space-y-4">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700">Nome Completo</label>
+                        <input type="text" id="nome"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-mmedium text-gray-700">E-mail</label>
+                        <input type="email" id="email"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                        <input type="tel" id="telefone"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="curriculo" class="block text-sm font-medium text-gray-700">Currículo (PDF)</label>
+                        <input type="file" id="curriculo"
+                            class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Enviar
+                            Candidatura</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="bg-gray-100 py-16 px-4">
+        <div class="container mx-auto md:flex items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <img src="https://via.placeholder.com/500x350?text=Nossa+Loja" alt="Loja TechParts"
+                    class="rounded-lg shadow-lg w-full">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Sobre a TechParts</h2>
+                <p class="mb-4">Há mais de 10 anos no mercado, somos referência em vendas de peças e periféricos de
+                    informática.</p>
+                <p class="mb-4">Oferecemos garantia estendida em todos os produtos e suporte técnico especializado.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Preços competitivos</li>
+                    <li>Entrega rápida</li>
+                    <li>Atendimento personalizado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
