@@ -5,18 +5,15 @@ from django.core.files.uploadedfile import UploadedFile
 
 class CollaboratorRepositoryInterface(ABC):
     @abstractmethod
-    def create(self, collaborator_data: Dict[str, Union[str, UploadedFile]]) -> 'Colaborador':
-        """
-        Cria um novo colaborador no repositório
+    def create_collaborator(
+        self,
+        name: str,
+        phone: str,
+        email: str,
+        file: UploadedFile
+    ) -> Dict[str, Union[str, bool]]:
+        pass
 
-        Args:
-            collaborator_data: Dicionário contendo:
-               - 'name': str
-               - 'email': str
-               - 'phone': str
-               - 'curriculum': UploadedFile
-
-        Returns:
-           Instância do Colaborador criado
-        """
+    @abstractmethod
+    def validate_file_type(self, file: UploadedFile) -> bool:
         pass
